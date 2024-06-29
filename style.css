@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "Work Sans", sans-serif;
+  background-color: hsl(275, 100%, 97%);
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./assets/images/background-pattern-desktop.svg) ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.accordion{
+  width: 50%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  display: block;
+  padding: 40px 15px;
+  margin: auto;
+
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+
+}
+
+.content{
+  margin-bottom: 10px;
+}
+
+.dropdown{
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown-header{
+  font-size: 20px;
+  font-weight: 700;
+  padding: 18px 0;
+  margin-bottom: 15px;
+  position: relative;
+  
+}
+
+.dropdown-header h2{
+  font-weight: 600;
+  width: 95%;
+  cursor: pointer;
+}
+
+.faq-icon{
+  border: 0px;
+  width: 30px;
+  height: 30px;
+  background: url(./assets/images/icon-plus.svg);
+  background-size: cover;
+  background-color: inherit;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: absolute;
+  right: 10px;
+  top: 25px;
+
+}
+
+.faq-icon.active {
+  background-image: url(./assets/images/icon-minus.svg); /* Path to your minus image */
+}
+
+.dropdown-body{
+  margin-bottom: 15px;
+  display: none;
+  
+}
+
+.open{
+  display: block;
+  
+}
+
+
+@media screen and (max-width: 600px){
+  body{
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    background-attachment: fixed;
+  }
+}
